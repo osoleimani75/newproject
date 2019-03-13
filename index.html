@@ -10,8 +10,25 @@
     <!------- Stylesheet ---------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/Style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/resume.css">
+    <!-- Style for result cards -->
+    <style>
+        /* ---------------------------------------------------
+    SEARCH BAR
+    ----------------------------------------------------- */
+        .card-text strong {
+            color: black;
+        }
+
+        #listing-link {
+            color: #708fbd;
+        }
+
+        /* #listing-link:hover {
+            change link to lighter text
+        } */
+    </style>
 
     <!------- Javascript ---------->
     <!-- Fontawesome JS -->
@@ -38,6 +55,7 @@
             <p class="lead">Find the perfect job! (or at least a decent one!)</p>
         </div>
     </div>
+
     <div class="wrapper">
 
         <nav id="sidebar">
@@ -106,6 +124,11 @@
     <!----- End Of Wrapper ----->
 
     <footer>
+        <ul id="footLink">
+            <li>
+                <a href="pages/devContact.html">-Contact Us -</a>
+            </li>
+        </ul>
         <div class="container d-flex" id="signInFooter">
             <div class="col-sm-4 text-center">
                 <img src="assets/images/icons/github.png" id="gitImg" alt="">

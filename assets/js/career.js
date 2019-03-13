@@ -65,11 +65,11 @@ function joobleSearch(title, location) {
         company.addClass("card-title");
         var description = $("<p>").html(jsonResponse.jobs[i].snippet);
         description.addClass("card-text");
-        var location = $("<p>").html("Location: " + jsonResponse.jobs[i].location);
+        var location = $("<p>").html("<strong>Location:</strong> " + jsonResponse.jobs[i].location);
         location.addClass("card-text");
         var jobType = $("<p>").html("<strong>Job Type:</strong> " + jsonResponse.jobs[i].type);
         jobType.addClass("card-text");
-        var link = $("<p>").html("<strong>Link:</strong> <a href=" + jsonResponse.jobs[i].link + " target='_blank'>Take me to the full listing</a>");
+        var link = $("<p>").html("<strong>Link:</strong> <a id='listing-link' href=" + jsonResponse.jobs[i].link + " target='_blank'>Take me to the full listing</a>");
         jobType.addClass("card-text");
         // Constructing the card
         cardBody.append(company);

@@ -4,7 +4,7 @@ function attacheHtml(fileName) {
 
 }
 
-// get parameters from user's input for LFW
+// get parameters from user's input for api search
 $(document).on("click", "#lfw-button", function (event) {
   // prevents page refresh
   event.preventDefault();
@@ -44,22 +44,28 @@ function joobleSearch(title, location) {
         // console.log(jsonResponse.jobs[i].title);
         // console.log(jsonResponse.jobs[i].snippet);
         // console.log(jsonResponse.jobs[i].type);
+        // console.log(jsonResponse.jobs[i].link);
 
-        // card div
+        // Card div
         var card = $("<div>");
         card.addClass("card mt-4 mb-4");
-        // card header div
+        // Card header div
         var headerHolder = $("<div>")
         headerHolder.addClass("card-header")
-        var cardHeader = $("<h3>").html("<strong>" + jsonResponse.jobs[i].title + "</strong>");
+        var cardHeader = $("<h5>").html("<strong>" + jsonResponse.jobs[i].title + "</strong>");
         headerHolder.append(cardHeader);
-        // card body div
+        // Card body div
         var cardBody = $("<div>");
         cardBody.addClass("card-body");
-        var company = $("<h4>").html("<strong>Company: </strong>" + jsonResponse.jobs[i].company);
+        var company = $("<h5>").html("<strong>Company: </strong>" + jsonResponse.jobs[i].company);
+        company.addClass("card-title");
         var description = $("<p>").html(jsonResponse.jobs[i].snippet);
-        var jobType = $("<p>").html("<strong>Job Type:</strong> " + jsonResponse.jobs[i].type)
-        var link = $("<p>").html("<strong>Link:</strong> <a href=" + jsonResponse.jobs[i].link + " target='_blank'>Take me to the full listing</a>")
+        description.addClass("card-text");
+        var jobType = $("<p>").html("<strong>Job Type:</strong> " + jsonResponse.jobs[i].type);
+        jobType.addClass("card-text");
+        var link = $("<p>").html("<strong>Link:</strong> <a href=" + jsonResponse.jobs[i].link + " target='_blank'>Take me to the full listing</a>");
+        jobType.addClass("card-text");
+        // Constructing the card
         cardBody.append(company);
         cardBody.append(description);
         cardBody.append(jobType);
@@ -68,11 +74,10 @@ function joobleSearch(title, location) {
         card.append(cardBody);
         $("#results-div").append(card);
         $("#loading-text").remove();
-
       };
     };
   };
   //Send request to the server
   http.send(params);
-}
+};
 

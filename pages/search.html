@@ -1,31 +1,33 @@
 <script>
-    getCurrentLocation(function(result){
+    getCurrentLocation(function (result) {
         $("#cityLookup").val(result.city + ", " + result.state)
     });
 </script>
-    <!----- Search Bar ------>
-    <div class="row">
-            <div class="col-sm-12">
-                    <form class="form-inline searchBar">
-                            <input id="keywordLookup" class="form-control mr-sm-2" type="search" placeholder="kewords" aria-label="Search">
-                            <input id="cityLookup" class="form-control mr-sm-2" type="search" placeholder="city" aria-label="Search">
-                            <button class="btn  my-1 mx-sm-0 mx-md-2" type="submit">Search</button>
-                    </form>   
-            </div>                             
-        </div> <!----- End Of SearchBar ----->
+<!----- Search Bar ------>
+<div class="row">
+    <div class="col-sm-12">
+        <form class="form-inline searchBar">
+            <input id="keywordLookup" class="form-control mr-sm-2" type="search" placeholder="keywords"
+                aria-label="Search">
+            <input id="cityLookup" class="form-control mr-sm-2" type="search" placeholder="city" aria-label="Search">
+            <button class="btn  my-1 mx-sm-0 mx-md-2" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+<!----- End Of SearchBar ----->
 
-        <div class="d-flex flex-sm-column flex-lg-row  mt-5 justify-content-between">
-                        <div class="order-sm-2 order-lg-1  resultSearch">
-                            <!------------ Insert Here ---------->
-                            <div class="card">
-                                <div class="card-header">
-                                    Header
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Title</h5>
-                                    <p class="card-text">Content</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order-sm-1 order-lg-2  filterSide "></div>
+<div class="d-flex flex-sm-column flex-lg-row  mt-5 justify-content-between">
+    <div class="order-sm-2 order-lg-1  resultSearch">
+        <!------------ Insert Here ---------->
+        <div class="card">
+            <div class="card-header">
+                Header
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Title</h5>
+                <p class="card-text">Content</p>
+            </div>
         </div>
+    </div>
+    <!-- <div class="order-sm-1 order-lg-2  filterSide "></div> -->
+</div>

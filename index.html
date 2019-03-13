@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,13 @@
 
     <!------- Stylesheet ---------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/resume.css">
 
     <!------- Javascript ---------->
     <!-- Fontawesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" ></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
     <!-- Firebase JS -->
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
     <!-- jQuery JS -->
@@ -22,90 +23,102 @@
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <!-- Carrier JS -->
     <script src="assets/js/location.js"></script>
     <script src="assets/js/career.js"></script>
 
-    
-</head>
-<body>
 
+</head>
+
+<body>
+    <div id="indexHeader">
+        <div class="container">
+            <h1 class="display-4">Creature job search engine</h1>
+            <p class="lead">find the perfect job! (or at least a decent one!)</p>
+        </div>
+    </div>
     <div class="wrapper">
 
-            <nav id="sidebar">
-                    <div class="sidebar-header text-center">
-                        <img src="assets/images/profile/men.png">            
-                        <p class="text-center"> WELCOME</p>
-                        <p style="color: coral;" class="text-center">Guest</p>
+        <nav id="sidebar">
+            <div class="sidebar-header text-center">
+                <img src="assets/images/profile/men.png">
+                <p class="text-center"> WELCOME</p>
+                <p style="color: coral;" class="text-center">Guest</p>
+            </div>
+
+
+            <ul class="list-unstyled components text-center">
+                <li>
+                    <a href="#" onclick="attacheHtml('search')">Job Search</a>
+                </li>
+                <li>
+                    <a href="#" onclick="attacheHtml('favorites')">Job Favorites</a>
+                </li>
+                <li>
+                    <a href="#" onclick="attacheHtml('account')">My Account</a>
+                </li>
+                <li>
+                    <a href="#" onclick="attacheHtml('resume')">Resume</a>
+                </li>
+            </ul>
+
+        </nav>
+        <!----- End Of Sidebar ----->
+
+        <div id="content">
+            <nav class="navbar navbar-expand-lg  ">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="pages/login.html"><b>Login</b></a>
+                                <a class="nav-link" href="pages/signup.html"><b>Create Account</b></a>
+                            </li>
+                        </ul>
                     </div>
+                </div>
 
-        
-                    <ul class="list-unstyled components text-center">
-                        <li>
-                            <a href="#" onclick="attacheHtml('search')" >Job Search</a>
-                        </li>
-                        <li>
-                            <a href="#" onclick="attacheHtml('favorites')">Job Favorites</a>
-                        </li>                <li>
-                            <a href="#" onclick="attacheHtml('account')">My Account</a>
-                        </li>
-                        <li>
-                            <a href="#" onclick="attacheHtml('resume')">Resume</a>
-                        </li>
-                    </ul>
-        
-                </nav> <!----- End Of Sidebar ----->
+            </nav>
+            <!--------------------------------------------------------->
+            <div id="includeHtml"></div>
+            <script>
+                $('#includeHtml').load('pages/search.html');
+            </script>
 
-                <div  id="content">
-                        <nav class="navbar navbar-expand-lg  ">
-                            <div class="container-fluid">
-            
-                                <button type="button" id="sidebarCollapse" class="navbar-btn">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <i class="fas fa-align-justify"></i>
-                                </button>
-            
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="nav navbar-nav ml-auto">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="pages/login.html"><b>Login</b></a>                                            
-                                            <a class="nav-link" href="pages/signup.html"><b>Create Account</b></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                        </nav> 
-               <!--------------------------------------------------------->
-                    <div id="includeHtml"></div>
-                    <script>
-                        $('#includeHtml').load('pages/search.html');
-                    </script>
+            <!--------------------------------------------------------->
 
-               <!--------------------------------------------------------->
-      
-                </div> <!----- End Of Content ----->
-    </div> <!----- End Of Wrapper ----->
+        </div>
+        <!----- End Of Content ----->
+    </div>
+    <!----- End Of Wrapper ----->
 
     <footer>
-            <div class="container d-flex" id="signInFooter">
-                <div class="col-sm-4 text-center">
-                    <img src="assets/images/icons/github.png" id="gitImg" alt="">
-                </div>
-                <div class="col-sm-4 text-center">
-                    <img src="assets/images/icons/geoip.png" id = "geoIpImg" alt="">
-                </div>
-                <div class="col-sm-4 text-center">
-                    <img src="assets/images/icons/jooble.svg" id = "joobleImg" alt="">
-                </div>
+        <div class="container d-flex" id="signInFooter">
+            <div class="col-sm-4 text-center">
+                <img src="assets/images/icons/github.png" id="gitImg" alt="">
             </div>
-    
-        </footer>
+            <div class="col-sm-4 text-center">
+                <img src="assets/images/icons/geoip.png" id="geoIpImg" alt="">
+            </div>
+            <div class="col-sm-4 text-center">
+                <img src="assets/images/icons/jooble.svg" id="joobleImg" alt="">
+            </div>
+        </div>
+
+    </footer>
 
 
     <script type="text/javascript">
@@ -119,6 +132,7 @@
     <script>
 
     </script>
-    
+
 </body>
+
 </html>

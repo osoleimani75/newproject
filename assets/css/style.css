@@ -261,10 +261,16 @@ a[data-toggle="collapse"] {
   line-height: 1em;
   color: #708fbd;
 }
-
+#footLink{
+  text-align: center;
+  padding: 10px;
+  color: #708fbd;
+  list-style-type:none;
+}
 footer {
   background-color: #49556a;
-  padding: 100px 0;
+  padding: 5px 0;
+
 }
 
 footer img {

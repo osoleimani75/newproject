@@ -1,0 +1,81 @@
+<<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+        <!------------ Stylesheet ------------>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css">
+        <!------------ Scripts ------------>
+        
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        
+</head>
+
+<body style="background-color:#4c6994 !important;">
+
+    <div class="container mt-sm-5">
+
+        <div style="position: relative;" class="row justify-content-center vertical-center">
+            <div class="card col-sm-12 col-md-10 logmein">
+
+                    <form>
+                <div class="form-group">
+                            <label for="devContacts"></label>
+                            
+                            <textarea class="form-control" id="dev-list" rows="6">  
+                                    Tony Goodwin
+                                    Lucas Dutton
+                                    Cesar Ganzon
+                                    Omid Soleimani
+                            </textarea>
+                         
+                        </div>        
+
+                        <button onclick="goBack()" type="reset"
+                            class="btn float-right mt-4 bg-form px-4 ml-4">Go Back</button>
+                        
+                    </form>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <!-- footer -->
+
+        <footer style="background-color:#4c6994 !important; padding: 30px 0">
+                <div class="container d-flex" id="signInFooter">
+                    <div class="col-sm-4 text-center">
+                        <img src="../assets/images/icons/github.png" id="gitImg" alt="">
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <img src="../assets/images/icons/geoip.png" id = "geoIpImg" alt="">
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <img src="../assets/images/icons/jooble.svg" id = "joobleImg" alt="">
+                    </div>
+                </div>
+        
+        </footer>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -3,6 +3,7 @@ function attacheHtml(fileName){
     $('#includeHtml').load('pages/' + fileName +".html");
 
 }// get parameters from user's input for LFW
+
 $("#lfw-button").on("click", function (event) {
   // prevents page refresh
   event.preventDefault();

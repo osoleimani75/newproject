@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+        <!------------ Stylesheet ------------>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css">
+        <!------------ Scripts ------------>
+        <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="../assets/js/connection.js"></script>
+        <script src="../assets/js/logincontrol.js"></script>
+</head>
+
+<body style="background-color:#4c6994 !important;">
+
+    <div class="container mt-sm-5">
+
+        <div style="position: relative;" class="row justify-content-center vertical-center">
+            <div class="card col-sm-12 col-md-10 logmein">
+
+                <div class="men"><img src="../assets/images/profile/men.png"></div>
+                <div class="card-body">
+                    <form class="text-color">
+                        <div style="margin-top: 30px;" class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="FName">First Name</label>
+                                    <input type="text" class="form-control" id="FName" placeholder="First Name">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="MName">Middle Name</label>
+                                    <input type="text" class="form-control" id="MName" placeholder="Middle Name">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="LName">Last Name</label>
+                                    <input type="text" class="form-control" id="LName" placeholder="Last Name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="inputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Retype Email address</label>
+                                    <input type="email" class="form-control" id="inputEmail2"
+                                        aria-describedby="emailHelp" placeholder="Retype Email address"> </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Retype Password</label>
+                                    <input type="password" class="form-control" id="inputPassword1"
+                                        placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword2"
+                                        placeholder="Retype Password">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="contactNumber">Contact Number</label>
+                                    <input type="text" class="form-control" id="contactNumber"
+                                        placeholder="Contact number">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="resumeLink">Resume Link</label>
+                                    <input type="text" class="form-control" id="resumeLink" placeholder="Resume Link">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skilDescription">Brief description/Special skills</label>
+                            <textarea class="form-control" id="skillDescription" rows="4"></textarea>
+                        </div>
+
+                        <button onclick="goBack()" type="reset"
+                            class="btn float-right mt-4 bg-form px-4 ml-4">Cancel</button>
+                        <button type="submit" onclick="location.href='infoAccepted.html';" class="btn float-right mt-4 bg-form px-4"
+                            id="signUp">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <!-- footer -->
+
+        <footer style="background-color:#4c6994 !important; padding: 30px 0">
+                <div class="container d-flex" id="signInFooter">
+                    <div class="col-sm-4 text-center">
+                        <img src="../assets/images/icons/github.png" id="gitImg" alt="">
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <img src="../assets/images/icons/geoip.png" id = "geoIpImg" alt="">
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <img src="../assets/images/icons/jooble.svg" id = "joobleImg" alt="">
+                    </div>
+                </div>
+        
+        </footer>
+
+
+
+
+
+
+</body>
+
+</html>

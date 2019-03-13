@@ -1,0 +1,120 @@
+//---- VAriables
+$textColor: rgb(112, 143, 189);
+$bgColorItem: rgb(112, 143, 189);
+$bgTemplate: rgb(42, 49, 61);
+
+
+.pm-0{
+    padding: 5px !important;
+    margin: 0 !important;
+}
+
+.card{
+    border: 0 !important;
+    border-radius: 7px;
+    .card-header{
+        background-color: lighten($bgColorItem, 27%);
+        height: 40px;
+        border-radius:  7px 7px 0 0;
+    }
+    h6{
+        font-size: 1em;
+        line-height: 1em;
+        color: $bgColorItem;
+    }
+}
+
+
+/*--------------- Table Card ----------------*/
+
+.resumeCard{
+    color: lighten($bgTemplate,20%);
+    .card-header a:hover{ // add btn
+        color: lighten($bgTemplate,20%);
+    }
+    .card-header a{
+        font-size: 1.6em;
+        color: rgb(255,255,255);
+        cursor: pointer;
+        float: right;
+        margin-right: 25px;
+    }
+    .card-header{
+        font-size: 1.3em;
+        font-weight:bold; 
+        display: inline;
+        padding-left: 35px !important;
+        line-height: 1.6em;
+    }
+
+}
+
+
+
+.table-striped tbody tr:nth-of-type(odd){
+    background-color: $bgTemplate !important;
+
+}
+
+.trash{
+    cursor: pointer;
+}
+.trash :hover{
+    color: brown !important;
+}
+/*-------------------- New Card ------------------*/
+.newResume{
+    height: 0px; 
+    overflow: hidden; 
+    color: lighten($bgTemplate,20%);
+    .card-header{
+        font-size: 1.3em;
+        font-weight:bold; 
+        padding-left: 35px !important;
+        line-height: 1.6em;
+    }
+    button{
+        min-width: 7%;
+        margin-left: 20px;
+        background-color: $bgColorItem;
+        color: #fff;
+        border: 1px solid $bgColorItem;
+        &:hover, &:active, &:focus{
+            background-color: $bgTemplate;
+            border: 1px solid $bgTemplate;
+        }
+    }
+}
+
+.newResumeOpen{
+   // animation: newCardOpenAni 1s ;
+    height: 380px;
+    display: block !important;
+
+}
+
+
+.newResumeClose{
+   // animation: newCardCloseAni 1s !important;
+    height: 0px !important;
+}
+
+
+th:nth-child(1){
+    width: 20%;
+
+}
+
+th:nth-child(2){
+    width: 30%;
+}
+
+th:nth-child(3){
+    width: 40%;
+}
+
+
+th:nth-child(4){
+    width: 10%;
+
+}

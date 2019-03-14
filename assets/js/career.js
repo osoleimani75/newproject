@@ -25,8 +25,10 @@ $(document).on("click", "#lfw-button", function (event) {
 function joobleSearch(title, location) {
   var url = "https://us.jooble.org/api/";
   var key = "34a9751b-7ddd-45f6-92d5-801f278b9a82";
-  // extra keys because jooble limits their api searches to 500 request per key if the account is not verified
+  // extra keys because jooble limits their api searches to 500 requests per key if the account is not verified
   // var key = "d6193eca-4b1a-4b0a-8fba-097445fecf94";
+  // var key = "6f329c50-d4a2-4792-9954-dd7ee13155d7";
+  // var key = "d05faa90-020a-4885-9a6b-64395f518e6b";
   // var paramsTemplate = "{ keywords: 'Web Developer', location: 'San Diego, CA'}"
   var params = "{keywords: '" + title + "', location: '" + location + "'}";
 
@@ -65,12 +67,12 @@ function joobleSearch(title, location) {
         company.addClass("card-title");
         var description = $("<p>").html(jsonResponse.jobs[i].snippet);
         description.addClass("card-text");
-        var location = $("<p>").html("Location: " + jsonResponse.jobs[i].location);
+        var location = $("<p>").html("<strong>Location:</strong> " + jsonResponse.jobs[i].location);
         location.addClass("card-text");
         var jobType = $("<p>").html("<strong>Job Type:</strong> " + jsonResponse.jobs[i].type);
         jobType.addClass("card-text");
-        var link = $("<p>").html("<strong>Link:</strong> <a href=" + jsonResponse.jobs[i].link + " target='_blank'>Take me to the full listing</a>");
-        jobType.addClass("card-text");
+        var link = $("<p>").html("<strong>Link:</strong> <a id='listing-link' href=" + jsonResponse.jobs[i].link + " target='_blank'>Take me to the full listing</a>");
+        link.addClass("card-text");
         // Constructing the card
         cardBody.append(company);
         cardBody.append(description);

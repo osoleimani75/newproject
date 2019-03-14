@@ -5,75 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SIGN UP</title>
+    <title>Contact page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
-        <!------------ Stylesheet ------------>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css">
-        <!------------ Scripts ------------>
-        
-        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-        
+    <!------------ Stylesheet ------------>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css">
+    <!------------ Scripts ------------>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 </head>
 
 <body style="background-color:#4c6994 !important;">
 
-        <div class="container mt-sm-5">
+    <div class="container mt-sm-5">
+        <div class="row">
+            <div class="col-lg-8">
                 <div class="card">
-                        <div class="card-header">
-                           Contacts
-                        </div>
-                        <div class="card-body">    
-                        <div>      
-                                <textarea class="form-control" id="dev-list" rows="6">  
-                                        Tony Goodwin
-                                        Lucas Dutton
-                                        Cezar Ganzon
-                                        Omid Soleimani
-                                </textarea>
-                             
-                            </div>        
-    
-                            <button onclick="goBack()" type="reset"
-                                class="btn float-right mt-4 bg-form px-4 ml-4">Go Back</button>
-                            
-                        </form>
-                    
+                    <div class="card-header">
+                        Contacts
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Tony Goodwin: obgoody@gmail.com</p>
+                        <p class="card-text">Lucas Dutton: duttonaudioworks@gmail.com</p>
+                        <p class="card-text">Omid Soleimani: osoleimani75@gmail.com</p>
+                        <p class="card-text">Cezar Ganzon: crganzon@gmail.com</p>
+                        <button onclick="goBack()" type="reset" class="btn float-right mt-4 bg-form px-4 ml-4">Go
+                            Back</button>
+                    </div>
                 </div>
             </div>
-    
         </div>
-    
-        <script>
-            function goBack() {
-                window.history.back();
-            }
-        </script>
-        <!-- footer -->
-    
-            <footer style="background-color:#4c6994 !important; padding: 30px 0">
-                    <div class="container d-flex" id="signInFooter">
-                        <div class="col-sm-4 text-center">
-                            <img src="../assets/images/icons/github.png" id="gitImg" alt="">
-                        </div>
-                        <div class="col-sm-4 text-center">
-                            <img src="../assets/images/icons/geoip.png" id = "geoIpImg" alt="">
-                        </div>
-                        <div class="col-sm-4 text-center">
-                            <img src="../assets/images/icons/jooble.svg" id = "joobleImg" alt="">
-                        </div>
-                    </div>
-            
-            </footer>
-    
-    
-    
-    
-    
-    
-    </body>
-    
-    </html>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <!-- footer -->
+
+    <footer style="background-color:#4c6994 !important; padding: 30px 0">
+        <div class="container d-flex" id="signInFooter">
+            <div class="col-sm-4 text-center">
+                <a href="https://www.github.com/"><img src="../assets/images/icons/github.png" id="gitImg" alt=""></a>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="https://www.geoip.co.uk/"><img src="../assets/images/icons/geoip.png" id="geoIpImg" alt=""></a>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="https://www.us.jooble.org/"><img src="../assets/images/icons/jooble.svg" id="joobleImg"
+                        alt=""></a>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>
